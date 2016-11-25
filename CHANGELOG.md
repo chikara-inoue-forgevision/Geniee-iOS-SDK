@@ -1,3 +1,7 @@
+## Version 2.1.7
+
+- **Add Reward Video Mediation**
+
 ## Version 2.1.6
 
 - **Change http to https for ATS**

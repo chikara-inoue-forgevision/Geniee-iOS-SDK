@@ -2,9 +2,6 @@
 //  Log4GNAd.h
 //  GNAdSDK
 //
-//  Created by shingo.nakanishi on 13/03/04.
-//
-//
 
 #import <Foundation/Foundation.h>
 
