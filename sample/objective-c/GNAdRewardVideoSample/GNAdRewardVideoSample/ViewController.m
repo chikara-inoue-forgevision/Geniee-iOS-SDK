@@ -33,6 +33,7 @@ static const NSInteger GameLength = 5;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _zoneIDText.delegate = self;
     
     [GNSRewardVideoAd sharedInstance].delegate = self;
     self.coinCount = 0;
@@ -53,7 +54,7 @@ static const NSInteger GameLength = 5;
     //request.GNAdlogPriority = GNLogPriorityInfo;
     
     [[GNSRewardVideoAd sharedInstance] loadRequest:request
-                                        withZoneID:@"YOUR_SSP_ZONE_ID"];
+                                        withZoneID:_zoneIDText.text];
 }
 
 - (void)startNewGame {
@@ -152,6 +153,13 @@ didRewardUserWithReward:(GNSAdReward *)reward
     
     [self earnCoins:[reward.amount integerValue]];
     self.showVideoButton.hidden = YES;
+}
+
+// Hide the keyboard when press return key in a UITextField
+-(BOOL) textFieldShouldReturn:(UITextField *)textField
+{    
+    [textField resignFirstResponder];
+    return YES;
 }
 
 @end

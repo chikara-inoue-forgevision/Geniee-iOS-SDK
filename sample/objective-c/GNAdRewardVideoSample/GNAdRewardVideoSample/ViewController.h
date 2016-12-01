@@ -10,7 +10,9 @@
 #import <GNAdSDK/GNSAdReward.h>
 #import <GNAdSDK/GNSRewardVideoAdDelegate.h>
 
-@interface ViewController : UIViewController <GNSRewardVideoAdDelegate>
+@interface ViewController : UIViewController <GNSRewardVideoAdDelegate , UITextFieldDelegate>
+
+@property (weak, nonatomic) IBOutlet UITextField *zoneIDText;
 
 @property (weak, nonatomic) IBOutlet UILabel *gameLabel;
 
